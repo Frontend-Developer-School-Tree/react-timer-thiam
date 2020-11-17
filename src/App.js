@@ -21,7 +21,7 @@ class App extends React.Component{
     start = () => {
         this.timerInterval = setInterval (() => {
             this.setState( {value: this.state.value + 1} )
-        }, 1000)
+        }, 50)
  
         this.setState( {running:true} )
     }
@@ -40,22 +40,21 @@ class App extends React.Component{
         this.setState({ 
             value: 0, 
             running: false, 
-            list: this.state.list.concat([this.state.value])
         })
     }
 
-    /* conta = () => {
+    conta = () => {
         this.setState({
             list: this.state.list.concat([this.state.value])
         })
-    } */
+    }
         
     render() {
         return(
             <div className="App">
                 <Title main="Timer" />
                 <TimeViewer value={this.state.value} />
-                <TimeActions start={this.start} pause={this.pause} reset={this.reset} 
+                <TimeActions conta={this.conta} start={this.start} pause={this.pause} reset={this.reset} 
                 showStart={!this.state.running} showPause={this.state.running} />
                 <TimeList list={this.state.list} />
             </div>

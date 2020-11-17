@@ -8,7 +8,7 @@ class TimeList extends React.Component{
         return(
             <ul className="TimeList">
                 {this.props.list.map((value,index) => {
-                    return <li key={index}><TimeViewer value={value} small /></li>
+                    return <li key={index}>POSIZIONE {index} - Tempo:<TimeViewer value={value} small /></li>
                 })}
             </ul>
         )

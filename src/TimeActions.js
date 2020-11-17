@@ -14,7 +14,9 @@ class TimeActions extends React.Component{
     render() {
         return(
             <div className="TimeActions">
-                {/* <TimeAction id="Conta" label="C" onClick={this.props.conta} /> */}
+                <button className="Conta" onClick={this.props.conta}>
+                SALVA
+                </button>
                 {this.props.showStart && <TimeAction label="START" onClick={this.props.start} />}
                 {this.props.showPause && <TimeAction label="STOP" onClick={this.props.pause} />}
                 <TimeAction label="RESET" onClick={this.props.reset} />
